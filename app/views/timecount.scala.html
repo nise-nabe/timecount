@@ -1,3 +1,5 @@
+@(list: List[Tuple2[Int, String]])
+
 @main("timecount") {
 <div class="container">
   <table class="table table-striped">
@@ -8,10 +10,12 @@
       </tr>
     </thead>
     <tbody>
+      @for((id, time) <- list) {
       <tr>
-        <td>aaa</td>
-        <td>aaa</td>
+        <td>@id</td>
+        <td>@time</td>
       </tr>
+      }
     </tbody>
   </table>
 </div>

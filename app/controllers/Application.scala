@@ -10,7 +10,9 @@ object Application extends Controller {
   }
 
   def timecount = Action {
-    Ok(views.html.timecount())
+    var list = List[Tuple2[Int,String]]()
+    list = (1, "string") :: list
+    Ok(views.html.timecount(list))
   }
   
 }
